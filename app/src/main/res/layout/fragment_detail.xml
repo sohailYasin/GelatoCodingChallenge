@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragments.DetailFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/arrow_back"
+        app:drawableTint="@color/white" />
+
+    <com.jsibbold.zoomage.ZoomageView
+        android:id="@+id/detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/description"
+        app:zoomage_animateOnReset="true"
+        app:zoomage_autoCenter="true"
+        app:zoomage_autoResetMode="UNDER"
+        app:zoomage_maxScale="8"
+        app:zoomage_minScale="0.6"
+        app:zoomage_restrictBounds="false"
+        app:zoomage_translatable="true"
+        app:zoomage_zoomable="true"
+        tools:scaleType="centerCrop"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.nambimobile.widgets.efab.ExpandableFabLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.nambimobile.widgets.efab.Overlay
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.nambimobile.widgets.efab.ExpandableFab
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:efab_closingAnticipateTension="0"
+                app:efab_icon="@drawable/share"
+                app:efab_iconAnimationRotationDeg="-225" />
+
+            <com.nambimobile.widgets.efab.FabOption
+                android:id="@+id/social_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@drawable/socail_share"
+
+                app:label_text="Social Share" />
+
+            <com.nambimobile.widgets.efab.FabOption
+                android:id="@+id/save_locally"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@drawable/save_disk"
+                app:label_text="Save Photo" />
+
+        </com.nambimobile.widgets.efab.ExpandableFabLayout>
+    </LinearLayout>
+</FrameLayout>
